@@ -1,0 +1,23 @@
+package com.sathya.springmvc.product.controller;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+public class ProductModel {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Product {
+	private String name;
+	private String brand;
+	private String madeIn;
+	private double price;
+	private int discountrate;
+	private int quantity;
+
+
+}
+
+
+}

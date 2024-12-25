@@ -1,0 +1,15 @@
+package com.sathya.springmvc.employeee.service;
+
+import org.springframework.stereotype.Service;
+
+import com.sathya.springmvc.employeee.model.EmployeeModel;
+
+@Service
+public class EmployeeService {
+
+	public void saveEmployeeDetails(EmployeeModel employeeModel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

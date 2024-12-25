@@ -1,0 +1,13 @@
+<html>
+    <head>
+       <title>Contact</title>
+    </head>
+    <body>
+       <h1>
+        welcome to Contact web page
+       </h1>
+	   <h1>Product Details Form</h1>
+	   		<form th:action="@{/getproduct}" method="get">
+				<p>Welcome to Contact Page</p>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+package com.sathya.springmvc.employeee.repository;
+
+import org.springframework.stereotype.Repository;
+
+import com.sathya.springmvc.employeee.entity.EmployeeEntity;
+
+@Repository
+public class EmployeeRepository {
+
+	public void save(EmployeeEntity employeeEntity) {
+		
+		
+	}
+
+}

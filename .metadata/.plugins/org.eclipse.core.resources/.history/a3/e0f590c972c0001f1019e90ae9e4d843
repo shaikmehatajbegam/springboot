@@ -1,0 +1,62 @@
+package com.sathya.springmvc.employeee.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.sathya.springmvc.employeee.entity.EmployeeEntity;
+import com.sathya.springmvc.employeee.model.EmployeeModel;
+import com.sathya.springmvc.employeee.service.EmployeeService;
+
+
+@Controller
+public class EmployeeController {
+	@Autowired
+	EmployeeService employeeService;
+	
+@GetMapping("/employeeform")
+	public String getEmployeeForm()
+	{
+	
+		
+		return "Employee";
+}
+@PostMapping("/save employeee")
+public String saveEmployee(EmployeeModel employeeModel) {
+	employeeService.saveEmployeeDetails(employeeModel);
+	
+	return "Sucess";
+}
+
+
+@GetMapping("/getallemployee")
+public String getAllEmployee(Model model) {
+    List<EmployeeEntity>employee =EmployeeService.getAllEmployee();
+    model.addAttribute("employee",employee);
+    return "Employeelist";
+}
+/*
+@GetMapping("/getsearchform")
+public String getsearchform() {
+	return"search-product";
+	}
+@PostMapping("/searchbyid")
+public String Searchbyid(@RequestParam Long id,Model model) {
+	EmployeeEntity employee=EmployeeService.searchbyid(id);
+	model.addAttribute("employee",product);
+	return"search-product";
+}
+@GetMapping("/delete/{id}")
+public String deleteEmployeeById(@PathVariable("id") Long id) {
+	EmployeeService.deleteemployeeById(id);
+	return "redirect:/getallemployee";
+	
+}*/
+
+}

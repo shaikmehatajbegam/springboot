@@ -1,0 +1,28 @@
+ package com.sathya.springmvc.product.service;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;import com.sathya.springmvc.product.model.ProductModel;
+import com.sathya.springmvc.product.repository.ProductRepository;
+
+public class ProductService {
+	@Autowired
+	
+	ProductRepository productRepository;
+	public void saveProductDetails(ProductModel productModel) {
+		double
+	 stockvalue=productModel.getPrice()*productModel.getQuantity();
+		double discountprice;
+		discountprice=productModel.getPrice()*productModel.getDiscountrate()/100;
+		double offerprice;
+        offerprice=productModel.getPrice()-discountprice;
+        double taxprice;
+        taxprice=productModel.getPrice();
+        double finalPrice;
+        double finalPrice=offerprice+taxprice;
+        
+        
+        
+        
+	}
+}

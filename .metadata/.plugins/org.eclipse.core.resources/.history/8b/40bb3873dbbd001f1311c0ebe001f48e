@@ -1,0 +1,29 @@
+package com.sathya.springmvc.product.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+public class ProductEntity {
+	@Data
+	@NoArgsConstructor
+	@AllArgsConstructor
+	
+public class product{
+	
+
+	private long id;
+	private String brand;
+	private String madein;
+	private double price;
+	private int quantity;
+	private int discountRate;
+	private double taxRate;
+	private double offerprice;
+	private double discountprice;
+	private double finalprice;
+	private double stockvalue;
+}
+	
+
+}

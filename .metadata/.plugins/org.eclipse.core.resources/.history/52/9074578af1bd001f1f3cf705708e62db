@@ -1,0 +1,14 @@
+package com.sathya.springmvc.product.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class productControl {
+	@GetMapping("/productform")
+	public String getproductform() {
+		return "Contactus";
+		
+	}
+	
+	
+
+}

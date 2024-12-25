@@ -1,0 +1,13 @@
+package com.sathya.springmvc.employeee.repository;
+
+
+
+@Repository
+public class EmployeeRepository extends  {
+
+	
+		
+		
+	}
+
+

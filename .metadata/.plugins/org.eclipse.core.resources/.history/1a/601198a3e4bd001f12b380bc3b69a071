@@ -1,0 +1,30 @@
+package com.sathya.springmvc.product.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+// Lombok annotations for getter, setter, toString, etc.
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity // This annotation should be applied to the class, not inside a method.
+public class ProductEntity {
+
+    @Id
+    private long id; // Unique identifier
+    private String brand;
+    private String madein;
+    private double price; // Original price
+    private int quantity; // Quantity in stock
+    private int discountRate; // Discount percentage (e.g., 10 for 10%)
+    private double taxRate; // Tax percentage (e.g., 5 for 5%)
+    
+    // Calculated fields
+    private double offerPrice; // Price after discount
+    private double discountPrice; // Discount amount
+    private double finalPrice; // Price after tax
+    private double stockValue; // Total value of stock (quantity * finalPrice)
+}

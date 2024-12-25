@@ -1,0 +1,10 @@
+package com.sathya.springmvc.product.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ProductService {
+	@Autowired
+	ProductRepository productrepository;
+	
+
+}
